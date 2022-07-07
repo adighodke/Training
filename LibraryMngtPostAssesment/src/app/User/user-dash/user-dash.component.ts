@@ -1,7 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { AddBookComponent } from 'src/app/Admin/add-book/add-book.component';
 import { ApiService } from 'src/app/services/api.service';
 
 @Component({
@@ -16,7 +18,7 @@ export class UserDashComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService, private dailog: MatDialog) { }
 
   ngOnInit(): void {
     
@@ -36,6 +38,9 @@ export class UserDashComponent implements OnInit {
           alert("Error in fetching")
         }
       })
+ }
+ reqBook(row :any){
+  this.api.getBook()
  }
  applyFilter(event: Event) {
   const filterValue = (event.target as HTMLInputElement).value;

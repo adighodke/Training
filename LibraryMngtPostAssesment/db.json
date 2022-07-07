@@ -17,14 +17,6 @@
       "id": 3
     },
     {
-      "bookName": "Adi",
-      "authorName": "Adi",
-      "publication": "sos",
-      "price": "50",
-      "quantity": "50",
-      "id": 5
-    },
-    {
       "bookName": "automobile",
       "authorName": "Ford",
       "publication": "Form",

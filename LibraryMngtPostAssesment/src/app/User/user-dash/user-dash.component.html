@@ -61,7 +61,7 @@
               <ng-container matColumnDef="action">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Action  </th>
                 <td mat-cell *matCellDef="let row"> 
-                <button mat-icon-button  color="primary"><mat-icon>add</mat-icon></button>
+                <button mat-icon-button (click)="reqBook(row)" color="primary"><mat-icon>add</mat-icon></button>
                 <!-- <button  mat-icon-button  color="warn"><mat-icon>delete</mat-icon></button>   -->
                 </td>
               </ng-container>
