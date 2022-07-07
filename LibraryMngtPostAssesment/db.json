@@ -1,0 +1,70 @@
+{
+  "bookList": [
+    {
+      "bookName": "The Fearless Heroes",
+      "authorName": "Gupta",
+      "publication": "ABC ltd.",
+      "price": "255",
+      "quantity": "5",
+      "id": 1
+    },
+    {
+      "bookName": "fdsfds",
+      "authorName": "fdgfg",
+      "publication": "dgfgfd",
+      "price": "52",
+      "quantity": "52",
+      "id": 3
+    },
+    {
+      "bookName": "a",
+      "authorName": "b",
+      "publication": "c",
+      "price": "500",
+      "quantity": "12",
+      "id": 4
+    },
+    {
+      "bookName": "Adi",
+      "authorName": "Adi",
+      "publication": "sos",
+      "price": "50",
+      "quantity": "50",
+      "id": 5
+    },
+    {
+      "bookName": "ygjhg",
+      "authorName": "gygfyg",
+      "publication": "yuyguy",
+      "price": "yugyugyu",
+      "quantity": "gyuygy",
+      "id": 6
+    },
+    {
+      "bookName": "ygjhg",
+      "authorName": "gygfyg",
+      "publication": "yuyguy",
+      "price": "yugyugyu",
+      "quantity": "gyuyghjasg",
+      "id": 7
+    },
+    {
+      "bookName": "The Fearless Heroes",
+      "authorName": "Gupta",
+      "publication": "ABC ltd.",
+      "price": "255",
+      "quantity": "6",
+      "id": 8
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
