@@ -1,0 +1,56 @@
+{
+  "Url": [
+    {
+      "id": "1",
+      "from": "HYD",
+      "to": "BLR",
+      "dateCreated": "2022-06-29T18:30:00.000Z",
+      "permanentLink": "True"
+    },
+    {
+      "id": "2",
+      "from": "BLR",
+      "to": "MUMBAI",
+      "dateCreated": "2022-06-29T18:30:00.000Z",
+      "permanentLink": "false"
+    },
+    {
+      "id": "3",
+      "from": "SAS",
+      "to": "SAA",
+      "dateCreated": "2022-06-29T18:30:00.000Z",
+      "permanentLink": "true"
+    },
+    {
+      "id": "12",
+      "from": "jk",
+      "to": "jk",
+      "dateCreated": "2022-06-29T18:30:00.000Z",
+      "permanentLink": "true"
+    },
+    {
+      "id": "4",
+      "from": "mum",
+      "to": "kop",
+      "dateCreated": "2022-06-29T18:30:00.000Z",
+      "permanentLink": "true"
+    },
+    {
+      "id": "11",
+      "from": "sds",
+      "to": "fdgd",
+      "dateCreated": "2022-06-29T18:30:00.000Z",
+      "permanentLink": "true"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

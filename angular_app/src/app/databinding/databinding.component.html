@@ -1,0 +1,9 @@
+<h2>string interpolation</h2>
+<p>Message: {{message}}</p>
+<h3>Property Binding</h3>
+<p><input type="text" [value]="message"></p>
+<h3>Event Binding</h3>
+<button type="submit" (click)="showdata()">Event Binding</button>
+<h3>Two way Binding</h3>
+<input type="text" [(ngModel)]="twoWay">
+{{twoWay}}

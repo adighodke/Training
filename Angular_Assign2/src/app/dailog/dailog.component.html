@@ -1,0 +1,38 @@
+<h1 mat-dialog-title>Add URL</h1>
+<form [formGroup]="UrlForm">
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>ID</mat-label>
+            <input formControlName="id"matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>From</mat-label>
+            <input formControlName="from" matInput>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>To</mat-label>
+            <input formControlName="to" matInput>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Choose Date </mat-label>
+            <input formControlName="dateCreated" matInput [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Permanent Link</mat-label>
+            <input formControlName="permanentLink" matInput>
+        </mat-form-field>
+    </p>
+</form>
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="primary" (click)="addUrl()">Save</button>
+    <button style="margin-left: 8px;" mat-raised-button color="warn" mat-dialog-close>close</button>
+</div>

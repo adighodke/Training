@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row" style="margin-top: 10px;">
+        <div class="search-employees">
+            <input type="text" name="search" [(ngModel)]="searchText" placeholder="search by employee">
+        </div>
+    </div>
+
+    <table  class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Employee Name</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr appHighlight *ngFor="let employee of employees | filter:searchText">
+                <td>{{employee.id}}</td>
+                <td>{{employee.name}}</td>
+                <td>{{employee.country}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
