@@ -11,7 +11,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 export class AddBookComponent implements OnInit {
   bookForm!: FormGroup;
   actionBtn: string = 'Save';
-  editData: any;
+  
 
   constructor(
     private formBuilder: FormBuilder,
@@ -39,7 +39,8 @@ export class AddBookComponent implements OnInit {
     }
   }
   addBook() {
-    if (!this.editData) {
+  
+    if (!this.editBook) {
       if (this.bookForm.valid) {
         this.api.postBook(this.bookForm.value).subscribe({
           next: (res) => {
@@ -53,11 +54,12 @@ export class AddBookComponent implements OnInit {
         });
       }
     } else {
+      
       this.updateBook();
     }
   }
   updateBook() {
-    this.api.patchBook(this.bookForm.value, this.editData.id).subscribe({
+    this.api.patchBook(this.bookForm.value, this.editBook.id).subscribe({
       next: (res) => {
         alert('book updated');
         this.bookForm.reset();

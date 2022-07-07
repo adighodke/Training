@@ -4,25 +4,17 @@
       "bookName": "The Fearless Heroes",
       "authorName": "Gupta",
       "publication": "ABC ltd.",
-      "price": "255",
-      "quantity": "5",
+      "price": "250",
+      "quantity": "50",
       "id": 1
     },
     {
-      "bookName": "fdsfds",
-      "authorName": "fdgfg",
-      "publication": "dgfgfd",
-      "price": "52",
+      "bookName": "Rich Dad Poor Dad",
+      "authorName": "Frank",
+      "publication": "Everest publication",
+      "price": "5000",
       "quantity": "52",
       "id": 3
-    },
-    {
-      "bookName": "a",
-      "authorName": "b",
-      "publication": "c",
-      "price": "500",
-      "quantity": "12",
-      "id": 4
     },
     {
       "bookName": "Adi",
@@ -33,28 +25,12 @@
       "id": 5
     },
     {
-      "bookName": "ygjhg",
-      "authorName": "gygfyg",
-      "publication": "yuyguy",
-      "price": "yugyugyu",
-      "quantity": "gyuygy",
+      "bookName": "automobile",
+      "authorName": "Ford",
+      "publication": "Form",
+      "price": "50",
+      "quantity": "25",
       "id": 6
-    },
-    {
-      "bookName": "ygjhg",
-      "authorName": "gygfyg",
-      "publication": "yuyguy",
-      "price": "yugyugyu",
-      "quantity": "gyuyghjasg",
-      "id": 7
-    },
-    {
-      "bookName": "The Fearless Heroes",
-      "authorName": "Gupta",
-      "publication": "ABC ltd.",
-      "price": "255",
-      "quantity": "6",
-      "id": 8
     }
   ],
   "comments": [

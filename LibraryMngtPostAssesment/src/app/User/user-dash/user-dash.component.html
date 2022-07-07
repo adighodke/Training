@@ -3,24 +3,20 @@
         <span>Library Management</span>
         <span class="example-spacer"></span>
         <div>
-            
-            <a mat-button (click)="addbook()">
-                <mat-icon class="mat-icon">add_circle</mat-icon>Add Book &nbsp;
+            <a mat-button >
+                <mat-icon class="mat-icon">menu_book</mat-icon>My Books &nbsp;
             </a>
-          
-            <a mat-button (click)="requests()">
-                <mat-icon class="mat-icon">download</mat-icon>Requests &nbsp;
+            <a mat-button routerLink="">
+                <mat-icon class="mat-icon">logout</mat-icon>Log Out &nbsp;
             </a>
-            <a mat-button routerLink="/">
-              <mat-icon class="mat-icon">logout</mat-icon>Log out &nbsp;
-          </a>
         </div>
-
     </mat-toolbar>
 </div>
 <div class="container">
     <div style="margin-top: 10px;">
+        <h1>Available Books</h1>
         <mat-form-field appearance="standard">
+            
             <mat-label>Filter</mat-label>
             <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
           </mat-form-field>
@@ -65,8 +61,8 @@
               <ng-container matColumnDef="action">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Action  </th>
                 <td mat-cell *matCellDef="let row"> 
-                <button mat-icon-button (click)="editBook(row)" color="primary"><mat-icon>edit</mat-icon></button>
-                <button (click)="deleteBook(row.id)" mat-icon-button  color="warn"><mat-icon>delete</mat-icon></button>    
+                <button mat-icon-button  color="primary"><mat-icon>add</mat-icon></button>
+                <!-- <button  mat-icon-button  color="warn"><mat-icon>delete</mat-icon></button>   -->
                 </td>
               </ng-container>
           
@@ -84,4 +80,3 @@
           
     </div>
 </div>
-<router-outlet></router-outlet>

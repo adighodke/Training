@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, NgForm, NgModel, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,13 +18,18 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
+import { RequestsComponent } from './Admin/requests/requests.component';
+import {MatCardModule} from '@angular/material/card';
+import { UserDashComponent } from './User/user-dash/user-dash.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     AddBookComponent,
-    DashboardComponent
+    DashboardComponent,
+    RequestsComponent,
+    UserDashComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,8 @@ import {MatSortModule} from '@angular/material/sort';
     HttpClientModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

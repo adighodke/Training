@@ -5,6 +5,7 @@ import { AddBookComponent } from '../add-book/add-book.component';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import { RequestsComponent } from '../requests/requests.component';
 
 
 @Component({
@@ -77,6 +78,10 @@ export class DashboardComponent implements OnInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+  
+  requests(){
+    this.dailog.open(RequestsComponent)
   }
   
 }
