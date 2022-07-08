@@ -1,50 +1,21 @@
-.example-spacer {
-    flex: 1 1 auto;
-  }
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.container{
+  width: 100%;
   
-  .example-flex-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  .mat-icon {
-    vertical-align: middle;
-    margin-top: -5px;
-  }
-  
-  a {
-    color: #fff;
-  }
-  
-  a:link {
-    text-decoration: none;
-  }
-  
-  a:visited {
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: none;
-  }
-  
-  a:active {
-    font-weight: 700;
-    color: black;
-  }
-  table {
-    width: 100%;
-  }
-  
-  .mat-form-field {
-    font-size: 14px;
-    width: 100%;
-    margin-top: -35px;
-  }
-  .container{
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  h1{
-    margin-left: 50%;
-  }
+}
+
+h1{
+  text-align: center;
+  margin-top: 20px
+}
+
+span{
+  margin-left: 10px;
+}
+table {
+  width: 100%;
+}

@@ -21,9 +21,10 @@ export class LoginComponent implements OnInit {
   login(): void {
     if (this.username == 'user' && this.password == 'user') {
       this.router.navigate(['userdash']);
+      this.toast.success({detail:"Login success", summary:"welcome, User",duration:5000})
     } else if (this.username == 'admin' && this.password == 'admin') {
       this.router.navigate(['dashboard']);
-      this.toast.success({detail:"Login success", summary:"welcome",duration:5000})
+      this.toast.success({detail:"Login success", summary:"welcome, Admin",duration:5000})
     } else {
         this.toast.error({detail:"Invalid password", summary:"login failed",duration:5000})
     }

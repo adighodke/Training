@@ -9,24 +9,31 @@
       "id": 1
     },
     {
-      "bookName": "Rich Dad Poor Dad",
-      "authorName": "Frank",
-      "publication": "Everest publication",
-      "price": "5000",
-      "quantity": "52",
-      "id": 3
-    },
-    {
       "bookName": "automobile",
       "authorName": "Ford",
       "publication": "Form",
       "price": "50",
       "quantity": "25",
       "id": 6
+    },
+    {
+      "bookName": "Rich Dad Poor Dad",
+      "authorName": "Frank",
+      "publication": "McGrew",
+      "price": "500",
+      "quantity": "75",
+      "id": 7
+    },
+    {
+      "bookName": "Industrial Revolution",
+      "authorName": "Shakti Dutta",
+      "publication": "Atlast",
+      "price": "755",
+      "quantity": "10",
+      "id": 8
     }
   ],
   "reqList": [
-
     {
       "id": 6,
       "bookName": "automobile",
@@ -34,6 +41,22 @@
       "publication": "Form",
       "price": "50",
       "quantity": "25"
+    },
+    {
+      "id": 1,
+      "bookName": "The Fearless Heroes",
+      "authorName": "Gupta",
+      "publication": "ABC ltd.",
+      "price": "250",
+      "quantity": "50"
+    },
+    {
+      "id": 3,
+      "bookName": "Rich Dad Poor Dad",
+      "authorName": "Frank",
+      "publication": "Everest publication",
+      "price": "5000",
+      "quantity": "52"
     }
   ],
   "profile": {

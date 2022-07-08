@@ -1,3 +1,4 @@
+import { NgToastService } from 'ng-angular-popup';
 import { ApiService } from './../../services/api.service';
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -11,11 +12,11 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 export class AddBookComponent implements OnInit {
   bookForm!: FormGroup;
   actionBtn: string = 'Save';
-  
 
   constructor(
     private formBuilder: FormBuilder,
     private api: ApiService,
+    private toast : NgToastService,
     @Inject(MAT_DIALOG_DATA) public editBook: any,
     private dailogRef: MatDialogRef<AddBookComponent>
   ) {}
@@ -39,12 +40,12 @@ export class AddBookComponent implements OnInit {
     }
   }
   addBook() {
-  
     if (!this.editBook) {
       if (this.bookForm.valid) {
         this.api.postBook(this.bookForm.value).subscribe({
           next: (res) => {
-            alert('Book added sucessfully');
+            
+            this.toast.success({detail:"Added",summary:"Book added sucessfully!",duration:5000});
             //this.bookForm.reset();
             this.dailogRef.close('save');
           },
@@ -54,14 +55,13 @@ export class AddBookComponent implements OnInit {
         });
       }
     } else {
-      
       this.updateBook();
     }
   }
   updateBook() {
     this.api.patchBook(this.bookForm.value, this.editBook.id).subscribe({
       next: (res) => {
-        alert('book updated');
+        this.toast.info({detail:"Updated",summary:"Book updated sucessfully!",duration:5000});
         this.bookForm.reset();
         this.dailogRef.close('update');
       },
