@@ -8,6 +8,7 @@ import { AddBookComponent } from 'src/app/Admin/add-book/add-book.component';
 import { ApiService } from 'src/app/services/api.service';
 import { NgToastService } from 'ng-angular-popup';
 import { ReqapiService } from 'src/app/services/reqapi.service';
+import { MyBooksComponent } from '../my-books/my-books.component';
 
 @Component({
   selector: 'app-user-dash',
@@ -40,6 +41,12 @@ export class UserDashComponent implements OnInit {
     this.getAllBooks();
    
   }
+  myBook() {
+    this.dailog
+      .open(MyBooksComponent, {
+        width: '500px',
+      })
+    }
 
 
   getAllBooks(){
@@ -120,5 +127,6 @@ export class UserDashComponent implements OnInit {
         }
       })
   }
+  
 
 }

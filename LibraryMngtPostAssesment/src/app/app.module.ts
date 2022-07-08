@@ -22,6 +22,7 @@ import { RequestsComponent } from './Admin/requests/requests.component';
 import {MatCardModule} from '@angular/material/card';
 import { UserDashComponent } from './User/user-dash/user-dash.component';
 import { NgToastModule } from 'ng-angular-popup';
+import { MyBooksComponent } from './User/my-books/my-books.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { NgToastModule } from 'ng-angular-popup';
     AddBookComponent,
     DashboardComponent,
     RequestsComponent,
-    UserDashComponent
+    UserDashComponent,
+    MyBooksComponent
   ],
   imports: [
     BrowserModule,
