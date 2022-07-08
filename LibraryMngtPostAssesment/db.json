@@ -25,11 +25,15 @@
       "id": 6
     }
   ],
-  "comments": [
+  "reqList": [
+
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 6,
+      "bookName": "automobile",
+      "authorName": "Ford",
+      "publication": "Form",
+      "price": "50",
+      "quantity": "25"
     }
   ],
   "profile": {
