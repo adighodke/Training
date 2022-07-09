@@ -13,55 +13,68 @@ import { MyBooksComponent } from '../my-books/my-books.component';
 @Component({
   selector: 'app-user-dash',
   templateUrl: './user-dash.component.html',
-  styleUrls: ['./user-dash.component.css']
+  styleUrls: ['./user-dash.component.css'],
 })
 export class UserDashComponent implements OnInit {
-  displayedColumns: string[] = ['id','bookName', 'authorName', 'publication', 'price','quantity','action'];
+  displayedColumns: string[] = [
+    'id',
+    'bookName',
+    'authorName',
+    'publication',
+    'price',
+    'quantity',
+    'action',
+  ];
   dataSource!: MatTableDataSource<any>;
-  no:any;
-  count:number=0;
+  no: any;
+  count: number = 0;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   requestForm!: FormGroup;
 
-  constructor(private api: ApiService, private dailog: MatDialog,private formbuilder:FormBuilder, private toast:NgToastService , private reqapi:ReqapiService) { }
+  constructor(
+    private api: ApiService,
+    private dailog: MatDialog,
+    private formbuilder: FormBuilder,
+    private toast: NgToastService,
+    private reqapi: ReqapiService
+  ) {}
 
   ngOnInit(): void {
-    this.requestForm=this.formbuilder.group({
-
-      id:['',Validators.required],
-      bookName:['',Validators.required],
-      authorName:['',Validators.required],
-      publication:['',Validators.required],
-      price:['',Validators.required],
-      quantity:['',Validators.required],
-      })
+    this.requestForm = this.formbuilder.group({
+      id: ['', Validators.required],
+      bookName: ['', Validators.required],
+      authorName: ['', Validators.required],
+      publication: ['', Validators.required],
+      price: ['', Validators.required],
+      quantity: ['', Validators.required],
+    });
 
     this.getAllBooks();
-   
   }
   myBook() {
-    this.dailog
-      .open(MyBooksComponent, {
-        width: '500px',
-      })
-    }
+    this.dailog.open(MyBooksComponent, {
+      width: '900px',
+    });
+  }
 
-
-  getAllBooks(){
+  getAllBooks() {
     this.api.getBook().subscribe({
-      next:(res)=>{
-        this.dataSource=new MatTableDataSource(res);
-        this.dataSource.paginator=this.paginator;
-        this.dataSource.sort=this.sort;
+      next: (res) => {
+        this.dataSource = new MatTableDataSource(res);
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
       },
-      error:(err)=>{
+      error: (err) => {
         // alert("Error while fetching the data")
-        this.toast.error({detail:"Error while fetching the data", summary:"something went wrong",duration:5000});
-      }
-    })
-
+        this.toast.error({
+          detail: 'Error while fetching the data',
+          summary: 'something went wrong',
+          duration: 5000,
+        });
+      },
+    });
   }
 
   applyFilter(event: Event) {
@@ -73,33 +86,30 @@ export class UserDashComponent implements OnInit {
     }
   }
 
-
-  // all about  user request operation .......................................
-  sendRequest(no:any){
-    if(no>2){
-    //  alert("You cross the limit");
-     this.toast.error({detail:"Limit Exceds", summary:"Max 3 Book available!!!",duration:5000});
+  sendRequest(no: any) {
+    if (no > 2) {
+      
+      this.toast.error({
+        detail: 'Limit Exceds',
+        summary: 'Max 3 Book available!!!',
+        duration: 5000,
+      });
+    } else {
+      {
+        this.reqapi.reqBook(this.requestForm.value).subscribe({
+          next: (res) => {
+            this.toast.success({
+              detail: 'Request send successfully',
+              summary: 'Thank You',
+              duration: 5000,
+            });
+          },
+        });
+      }
     }
-    else{
+  }
 
-     
-     {
-
-      console.log(this.requestForm.value)
-       this.reqapi.reqBook(this.requestForm.value)
-       .subscribe({
-         next:(res)=>{
-          //  alert("Request send successfully")
-           this.toast.success({detail:"Request send successfully", summary:"Thank You",duration:5000});
-           
-         }
-       })
-     }
-    }
-   }
-
-  reqBook(data:any){
-    
+  reqBook(data: any) {
     this.requestForm.controls['id'].setValue(data.id);
     this.requestForm.controls['bookName'].setValue(data.bookName);
     this.requestForm.controls['authorName'].setValue(data.authorName);
@@ -109,24 +119,19 @@ export class UserDashComponent implements OnInit {
     this.sendRequest(this.count);
     this.count++;
     console.log(this.count);
-    }
-
-
-   
-    getAllRequests(){
-      this.api.getBook()
-      .subscribe({
-        next:(res)=>{
-          this.dataSource=new MatTableDataSource(res);
-          this.dataSource.paginator=this.paginator;
-          this.dataSource.sort=this.sort
-          this.no = res.length;
-        },
-        error:(err)=>{
-          alert("Error while fetching the data")
-        }
-      })
   }
-  
 
+  getAllRequests() {
+    this.api.getBook().subscribe({
+      next: (res) => {
+        this.dataSource = new MatTableDataSource(res);
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
+        this.no = res.length;
+      },
+      error: (err) => {
+        alert('Error while fetching the data');
+      },
+    });
+  }
 }

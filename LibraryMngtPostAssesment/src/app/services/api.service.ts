@@ -20,6 +20,9 @@ export class ApiService {
     return this.http.delete<any>("http://localhost:3000/bookList/"+id);
   }
   getRequest(){
-    return this.http.get<any>(" http://localhost:3000/reqList")
+    return this.http.get<any>("http://localhost:3000/reqList/")
+  }
+  acceptedBook(data:any){
+    return this.http.post<any>("http://localhost:3000/userBook",data)
   }
 }

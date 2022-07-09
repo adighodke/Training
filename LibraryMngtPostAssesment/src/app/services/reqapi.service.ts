@@ -10,4 +10,8 @@ export class ReqapiService {
   reqBook(data:any){
     return this.http.post<any>("http://localhost:3000/reqList/",data)
   }
+
+  issuedBook(){
+    return this.http.get<any>("http://localhost:3000/userBook/")
+  }
 }

@@ -5,7 +5,7 @@
       "authorName": "Gupta",
       "publication": "ABC ltd.",
       "price": "250",
-      "quantity": "50",
+      "quantity": "60",
       "id": 1
     },
     {
@@ -35,6 +35,14 @@
   ],
   "reqList": [
     {
+      "id": 1,
+      "bookName": "The Fearless Heroes",
+      "authorName": "Gupta",
+      "publication": "ABC ltd.",
+      "price": "250",
+      "quantity": "60"
+    },
+    {
       "id": 6,
       "bookName": "automobile",
       "authorName": "Ford",
@@ -43,23 +51,32 @@
       "quantity": "25"
     },
     {
+      "id": 7,
+      "bookName": "Rich Dad Poor Dad",
+      "authorName": "Frank",
+      "publication": "McGrew",
+      "price": "500",
+      "quantity": "75"
+    }
+  ],
+  "userBook": [
+    {
       "id": 1,
       "bookName": "The Fearless Heroes",
       "authorName": "Gupta",
-      "publication": "ABC ltd.",
-      "price": "250",
-      "quantity": "50"
+      "publication": "ABC ltd."
     },
     {
-      "id": 3,
+      "id": 6,
+      "bookName": "automobile",
+      "authorName": "Ford",
+      "publication": "Form"
+    },
+    {
+      "id": 7,
       "bookName": "Rich Dad Poor Dad",
       "authorName": "Frank",
-      "publication": "Everest publication",
-      "price": "5000",
-      "quantity": "52"
+      "publication": "McGrew"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
