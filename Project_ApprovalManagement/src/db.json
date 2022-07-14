@@ -1,0 +1,33 @@
+{
+  "register": [
+    {
+      "empId": "1",
+      "firstName": "Adi",
+      "lastName": "G",
+      "email": "as@mail.com",
+      "role": "user",
+      "password": "user",
+      "id": 1
+    },
+    {
+      "empId": "2",
+      "firstName": "manger",
+      "lastName": "manager",
+      "email": "manager@gmail.com",
+      "role": "manager",
+      "password": "manager",
+      "id": 2
+    }
+
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

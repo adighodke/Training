@@ -1,0 +1,39 @@
+<!--For Button Close--->
+<div mat-dialog-title>
+    <div class="close_btn">
+      <button mat-icon-button mat-dialog-close>
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+    <h1 class="title">Login</h1>
+  </div>
+  <!--Login Form--->
+  <form class="example-form">
+  <mat-dialog-content>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+       <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        Please enter a valid email address
+      </mat-error> 
+    </mat-form-field>
+    <!-- second Part -->
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <!--Login Button-->
+    <button mat-raised-button color="primary" (click)="loginme()">Login</button>
+   <!--Other Links-->
+    <!-- <a href="">Forgot Password?</a><br>
+    <a href="registration">New User?</a> -->
+  </mat-dialog-content>
+</form>
+
+
+

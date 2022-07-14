@@ -1,0 +1,24 @@
+<div class="example-flex-container">
+    <mat-toolbar color="primary">
+        <span>Budget Approval</span>
+        <span class="example-spacer"></span>
+        <div>
+            <a mat-button routerLink="">
+                <mat-icon class="mat-icon">home</mat-icon>Home &nbsp;
+            </a>
+            <a mat-button (click)="openLogin()">
+                <mat-icon class="mat-icon">login</mat-icon>Log In &nbsp;
+            </a>
+            <a mat-button (click)="openReg()">
+                <mat-icon class="mat-icon" >person_add</mat-icon>Register &nbsp;
+            </a>
+            <a mat-button routerLink="/aboutus">
+                <mat-icon class="mat-icon">info</mat-icon>About Us &nbsp;
+            </a>
+        </div>
+
+    </mat-toolbar>
+</div>
+
+
+<router-outlet></router-outlet>
