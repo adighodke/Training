@@ -1,7 +1,9 @@
+import { ApiService } from './../../../services/api.service';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, NgForm, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { AuthenticateService } from 'src/app/services/authenticate.service';
 
 @Component({
   selector: 'app-login',
@@ -9,21 +11,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-  hide = true;
-  submit()
-  {
-    console.log("Form Submitted")
-  }
+  // emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  // hide = true;
+  // submit()
+  // {
+  //   console.log("Form Submitted")
+  // }
 
-  constructor(private router:Router, private matDialog:MatDialog) { }
+  constructor(private router:Router, private matDialog:MatDialog, private service:AuthenticateService) { }
   ngOnInit(): void {
-    
-  }
-
-  loginme(){
-    // this.router.navigateByUrl('admin');  
-    this.matDialog.closeAll();
- }
+    }
+public onSubmit(form:NgForm){
+  this.service.authenticateEmployee(form.value);
+  this.matDialog.closeAll();
+}
+//   loginme(){
+ 
+//     this.matDialog.closeAll();
+//  }
 
 }
