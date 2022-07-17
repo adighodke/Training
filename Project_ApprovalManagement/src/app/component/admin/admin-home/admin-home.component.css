@@ -1,0 +1,93 @@
+
+
+mat-sidenav {
+    margin: 10px;
+    width: 300px;
+    border-right: none;
+    background: #002b5c;
+    color: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+}
+
+
+mat-sidenav-container {
+    height: calc(100vh - 65px);
+}
+mat-divider {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.content {
+    height: calc(100vh - 98px);
+    border-radius: 10px;
+    margin: 14px;
+    margin-left: 32px;
+    background-color:aliceblue ;
+
+  
+    /* justify-content: center;
+    align-items: center; */
+
+    font-size: 2rem;
+    
+} 
+.example-container {
+    position: absolute;
+    margin-top: 60px;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+  }
+  .avatar {
+    margin-top: 16px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.name {
+    margin-top: 8px;
+    font-weight: normal;
+}
+.designation {
+    margin-top: -10px;
+    font-size: 0.8rem;
+    color: lightgrey;
+}
+.header{
+    text-align: center;
+    padding-top: 20px;
+    font-weight: 500;
+    font-size: xx-large;
+    color: red;
+    text-shadow: 2px 1px;
+}
+.example-form{
+    align-content: center;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-left: 300px;
+    
+  }
+  .example-full-width {
+    width: 100%;
+    padding: 0px;
+    font-size: medium;
+    text-align: center;
+    
+  }
+  .sub-btn{
+    background-color: green;
+    color: white;
+  }
+ 
+ 

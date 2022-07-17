@@ -35,6 +35,8 @@ import { AdminEmpHistoryComponent } from './component/admin/admin-emp-history/ad
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDividerModule} from '@angular/material/divider';
+import {matDatepickerAnimations, MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 
@@ -79,11 +81,8 @@ import {MatDividerModule} from '@angular/material/divider';
     HttpClientModule,
     MatSidenavModule,
     MatDividerModule,
-    
-    
-    
-    
-
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

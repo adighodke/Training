@@ -11,12 +11,7 @@ import { AuthenticateService } from 'src/app/services/authenticate.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  // emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-  // hide = true;
-  // submit()
-  // {
-  //   console.log("Form Submitted")
-  // }
+  
 
   constructor(private router:Router, private matDialog:MatDialog, private service:AuthenticateService) { }
   ngOnInit(): void {
@@ -25,9 +20,6 @@ public onSubmit(form:NgForm){
   this.service.authenticateEmployee(form.value);
   this.matDialog.closeAll();
 }
-//   loginme(){
- 
-//     this.matDialog.closeAll();
-//  }
+
 
 }

@@ -1,3 +1,86 @@
 <app-admin-nav></app-admin-nav>
 
-<p>admin-home works!</p>
+<app-emp-nav style="margin-bottom:5px"></app-emp-nav>
+
+<mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" class="mat-elevation-z8" opened>
+        <h1>Profile</h1>
+        <img class="avatar mat-elevation-z8" />
+
+        <h3 class="name">John Smith</h3>
+        <p class="designation">Software Engineer</p>
+        <mat-divider></mat-divider>
+
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content mat-elevation-z8">
+            <h1 class="header">Budget Approval Request</h1>
+
+            <div class="example-form">
+                <form [formGroup]="admRequestForm">
+                    <mat-form-field class="example-full-width" appearance="standard">
+
+                        <mat-label>Purpose</mat-label>
+                        <input matInput formControlName="purpose">
+                    </mat-form-field>
+                    <p>
+                        <mat-form-field class="example-full-width" appearance="standard">
+                            <mat-label>Description</mat-label>
+                            <textarea matInput formControlName="description"></textarea>
+                        </mat-form-field>
+                    </p>
+
+
+                    <table class="example-full-width" cellspacing="10">
+                        <tr>
+                            <td>
+                                <mat-form-field class="example-full-width" appearance="standard">
+                                    <mat-label>Approver</mat-label>
+                                    <input matInput formControlName="approver">
+                                </mat-form-field>
+                            </td> &nbsp;
+
+                            <td>
+                                <mat-form-field class="example-full-width" appearance="standard">
+                                    <mat-label>Estimated amount</mat-label>
+                                    <input matInput formControlName="estAmount">
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table class="example-full-width" cellspacing="10">
+                        <tr>
+                            <td>
+                                <mat-form-field class="example-full-width" appearance="standard">
+                                    <mat-label>Advance amount</mat-label>
+                                    <input matInput formControlName="advAmount">
+                                </mat-form-field>
+                            </td> &nbsp;
+
+                            <td>
+                                <mat-form-field class="example-full-width" appearance="standard">
+                                    <mat-label>Plan Date</mat-label>
+                                    <input matInput formControlName="date" [matDatepicker]="picker" >
+                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <button class="sub-btn" mat-raised-button (click)="onSubmit()">Submit</button> &nbsp;
+                <button mat-raised-button color="warn">Cancel</button>
+            </div>
+            
+        </div>
+        
+    </mat-sidenav-content>
+  
+</mat-sidenav-container>
+
+
+
+
