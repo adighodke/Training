@@ -8,56 +8,53 @@
     <h1 class="title">Login</h1>
   </div>
 
-  <form class="example-form">
+  <form  #myForm="ngForm" autocomplete="off" (ngSubmit)="onSubmit(myForm)" >
   <mat-dialog-content>
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Email</mat-label>
-      <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
-       <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-        Please enter a valid email address
-      </mat-error> 
-    </mat-form-field>
+      <input  type="firstName"  name="firstName" class="form-control margin-b" id="floatingInput" placeholder="Email address" required="" ngModel>
+      </mat-form-field>
    
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Enter your password</mat-label>
-      <input matInput [type]="hide ? 'password' : 'text'">
-      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-        [attr.aria-pressed]="hide">
-        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-      </button>
+      <input  type="password"  name="password" class="form-control margin-b" id="floatingPassword" placeholder="*********" required="" ngModel>
+      
     </mat-form-field>
-
-    <button mat-raised-button color="primary" (click)="loginme()">Login</button>
+    <button style="border-radius:50px;" type="submit" class="form-button button-l margin-b">Sign In</button> 
+    <button mat-raised-button color="primary" type="submit">Login</button>
 
     <a href="">Forgot Password?</a><br>
     <a href="registration">New User?</a> 
   </mat-dialog-content>
+</form> -->
+<div style="width: 350px;">
+<div mat-dialog-title>
+  <div class="close_btn">
+    <button mat-icon-button mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <h1 class="title">Login</h1>
+</div>
+
+<form  #myForm="ngForm" autocomplete="off" (ngSubmit)="onSubmit(myForm)">
+  <mat-dialog-content>
+  <!-- <div class="example-full-width"> -->
+    <div class="example-full-width" appearance="fill">
+    <mat-label>Email</mat-label>&nbsp;
+    <input class="example-full-width" type="firstName" name="firstName" id="floatingInput" placeholder="Email address" required="" ngModel>
+    </div>&nbsp;
+    
+  <div class="example-full-width" appearance="fill">
+    <mat-label>Password</mat-label>&nbsp;
+    <input class="example-full-width" type="password" name="password"  id="floatingPassword" placeholder="*********" required="" ngModel>
+  </div>
+  <br>
+
+  <button mat-raised-button color="primary" type="submit">Sign In</button>
+<br>
+  <small>Do not have an account?</small>
+  <a class="text-darkyellow" href="#"><small>Sign Up</small></a>
+</mat-dialog-content>
 </form>
-
-
- -->
- <div class="main-bg" style="height: 745px;">
-  <div class="login-container text-c animated flipInX ">
-     
-      <div class="container-content">
-          <div>
-           
-          </div>
-              <h3 class="text-whitesmoke">Welcome To Euromonitor</h3>
-              <p class="text-whitesmoke">Sign In</p>
-              <form  class="margin-t" #myForm="ngForm" autocomplete="off" (ngSubmit)="onSubmit(myForm)" >
-              <div class="form-group">
-                  <input style="border-radius: 50px;" type="firstName"  name="firstName" class="form-control margin-b" id="floatingInput" placeholder="Emai address" required="" ngModel>
-              </div>
-              <div class="form-group">
-                  <input  style="border-radius:50px;" type="password"  name="password" class="form-control margin-b" id="floatingPassword" placeholder="*********" required="" ngModel>
-
-              </div>
-              <button style="border-radius:50px;" type="submit" class="form-button button-l margin-b">Sign In</button>
-
-              <a class="text-darkyellow" href="#"><small>Forgot your password?</small></a>
-              <p class="text-whitesmoke text-center"><small>Do not have an account?</small></p>
-              <a class="text-darkyellow" href="#"><small>Sign Up</small></a>
-          </form>
-      </div>
-
+</div>

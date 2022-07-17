@@ -33,6 +33,8 @@ import { AdminUploadbillComponent } from './component/admin/admin-uploadbill/adm
 import { AdminEmpRequestsComponent } from './component/admin/admin-emp-requests/admin-emp-requests.component';
 import { AdminEmpHistoryComponent } from './component/admin/admin-emp-history/admin-emp-history.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 
@@ -56,7 +58,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     AdminRequestsComponent,
     AdminUploadbillComponent,
     AdminEmpRequestsComponent,
-    AdminEmpHistoryComponent
+    AdminEmpHistoryComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -74,6 +77,9 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     MatInputModule,
     MatButtonModule,
     HttpClientModule,
+    MatSidenavModule,
+    MatDividerModule,
+    
     
     
     
