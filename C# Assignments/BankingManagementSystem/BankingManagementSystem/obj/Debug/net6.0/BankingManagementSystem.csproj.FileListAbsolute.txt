@@ -1,0 +1,15 @@
+C:\Users\aditya.ghodke\OneDrive - Euromonitor International\Training\C# Assignments\BankingManagementSystem\BankingManagementSystem\bin\Debug\net6.0\BankingManagementSystem.exe
+C:\Users\aditya.ghodke\OneDrive - Euromonitor International\Training\C# Assignments\BankingManagementSystem\BankingManagementSystem\bin\Debug\net6.0\BankingManagementSystem.deps.json
+C:\Users\aditya.ghodke\OneDrive - Euromonitor International\Training\C# Assignments\BankingManagementSystem\BankingManagementSystem\bin\Debug\net6.0\BankingManagementSystem.runtimeconfig.json
+C:\Users\aditya.ghodke\OneDrive - Euromonitor International\Training\C# Assignments\BankingManagementSystem\BankingManagementSystem\bin\Debug\net6.0\BankingManagementSystem.dll
+C:\Users\aditya.ghodke\OneDrive - Euromonitor International\Training\C# Assignments\BankingManagementSystem\BankingManagementSystem\bin\Debug\net6.0\BankingManagementSystem.pdb
+C:\Users\aditya.ghodke\OneDrive - Euromonitor International\Training\C# Assignments\BankingManagementSystem\BankingManagementSystem\obj\Debug\net6.0\BankingManagementSystem.csproj.AssemblyReference.cache
+C:\Users\aditya.ghodke\OneDrive - Euromonitor International\Training\C# Assignments\BankingManagementSystem\BankingManagementSystem\obj\Debug\net6.0\BankingManagementSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aditya.ghodke\OneDrive - Euromonitor International\Training\C# Assignments\BankingManagementSystem\BankingManagementSystem\obj\Debug\net6.0\BankingManagementSystem.AssemblyInfoInputs.cache
+C:\Users\aditya.ghodke\OneDrive - Euromonitor International\Training\C# Assignments\BankingManagementSystem\BankingManagementSystem\obj\Debug\net6.0\BankingManagementSystem.AssemblyInfo.cs
+C:\Users\aditya.ghodke\OneDrive - Euromonitor International\Training\C# Assignments\BankingManagementSystem\BankingManagementSystem\obj\Debug\net6.0\BankingManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\aditya.ghodke\OneDrive - Euromonitor International\Training\C# Assignments\BankingManagementSystem\BankingManagementSystem\obj\Debug\net6.0\BankingManagementSystem.dll
+C:\Users\aditya.ghodke\OneDrive - Euromonitor International\Training\C# Assignments\BankingManagementSystem\BankingManagementSystem\obj\Debug\net6.0\refint\BankingManagementSystem.dll
+C:\Users\aditya.ghodke\OneDrive - Euromonitor International\Training\C# Assignments\BankingManagementSystem\BankingManagementSystem\obj\Debug\net6.0\BankingManagementSystem.pdb
+C:\Users\aditya.ghodke\OneDrive - Euromonitor International\Training\C# Assignments\BankingManagementSystem\BankingManagementSystem\obj\Debug\net6.0\BankingManagementSystem.genruntimeconfig.cache
+C:\Users\aditya.ghodke\OneDrive - Euromonitor International\Training\C# Assignments\BankingManagementSystem\BankingManagementSystem\obj\Debug\net6.0\ref\BankingManagementSystem.dll
